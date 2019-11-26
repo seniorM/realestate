@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Interior-Design-Responsive-Website-Templates-Edge">
 	<meta name="author" content="webThemez.com">
-	<title>Home - Flat Responsive Bootstrap Theme</title>
+	<title>Агентство недвижимости</title>
 	<link rel="favicon" href="assets/images/favicon.png">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -55,13 +55,13 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
+					<li class="active"><a href="index.html">Главная</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="services.html">Услуги</a></li>
 					
-					<li><a href="projects.html">Projects</a></li>
+					<li><a href="projects.html">Проекты</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Страницы<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sidebar-right.html">Right Sidebar</a></li>
 							<li><a href="#">Dummy Link1</a></li>
@@ -69,7 +69,7 @@
 							<li><a href="#">Dummy Link3</a></li>
 						</ul>
 					</li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html">Контакты</a></li>
 
 				</ul>
 			</div>
@@ -83,12 +83,10 @@
 		<div class="container">
 					<div class="fluid_container">
                     <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
-                        <div data-thumb="assets/images/slides/thumbs/img1.jpg" data-src="assets/images/slides/img1.jpg">
+                        @foreach($slider as $sliders)
+                        <div data-thumb="{{$sliders->image}}" data-src="{{$sliders->image}}" alt="{{$sliders->slider_title}}">
                         </div> 
-                        <div data-thumb="assets/images/slides/thumbs/img2.jpg" data-src="assets/images/slides/img2.jpg">
-                        </div>
-                        <div data-thumb="assets/images/slides/thumbs/img3.jpg" data-src="assets/images/slides/img3.jpg">
-                        </div> 
+                        @endforeach
                     </div><!-- #camera_wrap_3 -->
                 </div><!-- .fluid_container -->
 		</div>
@@ -123,13 +121,13 @@
                         </div>
                     </div>
                     <div class="form-group hidden-xs adv">
-                        <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> For Rent</label></div>
+                        <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Аренда</label></div>
                     </div>
                     <div class="form-group hidden-xs adv">
-                        <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> For Sale</label></div>
+                        <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Продажа</label></div>
                     </div>
                     <div class="form-group">
-                        <a href="" class="btn btnsearch">Search</a> 
+                        <a href="" class="btn btnsearch">Поиск</a> 
                     </div>
                 </form>
             </div>
@@ -144,7 +142,7 @@
 			
 			<div class="row">
 			<div class="section-heading">
-							<h2>Our Services</h2>
+							<h2>Наши услуги</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 						</div>
 				 
@@ -154,7 +152,7 @@
 					<div class="featured-box">
 						<i class="fa fa-eye fa-2x"></i>
 						<div class="text">
-							<h3>Renting</h3>
+							<h3>Аренда</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
 					</div>
@@ -163,7 +161,7 @@
 					<div class="featured-box">
 						<i class="fa fa-quote-right fa-2x"></i>
 						<div class="text">
-							<h3>Selling</h3>
+							<h3>Продажа</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
 					</div>
@@ -172,7 +170,7 @@
 					<div class="featured-box">
 						<i class="fa fa-arrows fa-2x"></i>
 						<div class="text">
-							<h3>Investing</h3>
+							<h3>Покупка</h3>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</div>
 					</div>
@@ -186,7 +184,7 @@
             	<div class="row">
                 	<div class="col-md-12">
                     	<div class="section-heading">
-							<h2>We make IT better</h2> 
+							<h2>Мы поможем Вам купить, продать или арендовать недвижимость</h2> 
 							  <p>
                         	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore <br class="hidden-tablet hidden-phone">
 							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -351,12 +349,12 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="simplenav">
-								<a href="index.html">Home</a> | 
-								<a href="about.html">About</a> |
-								<a href="services.html">Services</a> |
+								<a href="index.html">Главная</a> | 
+								<a href="about.html">О нас</a> |
+								<a href="services.html">Услуги</a> |
 								
-								<a href="projects.html">Projects</a> |
-								<a href="contact.html">Contact</a>
+								<a href="projects.html">Проекты</a> |
+								<a href="contact.html">Контакты</a>
 							</p>
 						</div>
 					</div>
@@ -364,7 +362,7 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="text-right">
-								Copyright &copy; 2019.  <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Bootstrap Templates</a> by WebThemez.com
+								Copyright &copy; 2019.  <a href="#" target="_blank">Сайт создан </a> by Max
 							</p>
 						</div>
 					</div>
